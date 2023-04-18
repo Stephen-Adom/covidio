@@ -1,10 +1,12 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Navigation } from './features';
 
 function App() {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <div className="App">
-      <Navigation />
+      {location.pathname !== '/' && <Navigation />}
       <Outlet />
     </div>
   );

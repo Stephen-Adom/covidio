@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
-import { Details, Home } from '../pages';
+import { Details, Home, SplashScreen } from '../pages';
 
 const router = createBrowserRouter([
   {
@@ -9,6 +9,10 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <SplashScreen />,
+      },
+      {
+        path: 'dashboard',
         element: <Home />,
       },
       {
