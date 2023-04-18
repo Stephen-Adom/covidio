@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchGlobalData } from '../api/endpoints';
+import { fetchAllCountries, fetchGlobalData } from '../api/endpoints';
 
 const initialState = {
   global: {},
@@ -17,7 +17,20 @@ export const globalInfo = createAsyncThunk('metrics/all', async (thunkAPI) => {
   }
 });
 
+export const getAllCountries = createAsyncThunk(
+  'metrics/countries',
+  async (thunkAPI) => {
+    try {
+      const response = await fetchAllCountries();
+      return response.data;
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err.response.data);
+    }
+  },
+);
+
 const metricSlice = createSlice({
+  name: 'metrics',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
