@@ -17,3 +17,28 @@ export const globalInfo = createAsyncThunk('metrics/all', async (thunkAPI) => {
   }
 });
 
+const metricSlice = createSlice({
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(globalInfo.pending, (state) => {
+        const IsPending = state;
+        IsPending.status = 'pending';
+      })
+      .addCase(globalInfo.fulfilled, (state, action) => {
+        const IsFulfilled = state;
+        IsFulfilled.status = 'fulfilled';
+        IsFulfilled.global = action.payload;
+        IsFulfilled.error = '';
+      })
+      .addCase(globalInfo.rejected, (state, action) => {
+        const IsRejected = state;
+        IsRejected.status = 'rejected';
+        IsRejected.global = {};
+        IsRejected.error = action.payload;
+      });
+  },
+});
+
+export default metricSlice.reducer;
