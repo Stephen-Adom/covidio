@@ -1,0 +1,7 @@
+header.header {
+  @apply bg-cyan-950 text-white px-3 py-5;
+}
+
+div.card {
+  @apply flex flex-col justify-center items-center p-3 bg-cyan-900 rounded-lg w-[10rem];
+}
