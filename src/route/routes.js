@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
-import { Details, Home, SplashScreen } from '../pages';
+import { Continent, Home, SplashScreen } from '../pages';
 
 const router = createBrowserRouter([
   {
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'details/:id',
-        element: <Details />,
+        path: 'continents/:continent',
+        element: <Continent />,
       },
     ],
   },

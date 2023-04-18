@@ -1,9 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import 'primereact/resources/themes/lara-light-indigo/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* NavBar */
+  header.nav-header {
+    @apply bg-slate-950 text-white;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  header.nav-header::-webkit-scrollbar {
+    display: none;
+  }
+
+  ul.menu-list {
+    @apply bg-slate-950 h-screen flex flex-col md:gap-4 pt-16 md:pt-2 fixed z-10 overflow-hidden transition-all ease-out duration-500 items-center;
+  }
+
+  a.nav-link {
+    @apply block w-[10rem] text-center p-5 md:p-2 md:border rounded-md md:w-[10rem] md:h-[4.5rem] md:flex justify-center items-center md:text-center hover:bg-slate-800 transition-all ease-out duration-300;
+  }
+
+  a.active {
+    @apply bg-slate-800;
+  }
+}
 
 :root {
   --primary: #96bf01;
@@ -17,4 +46,20 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #dbdcef;
+  border-right-color: #474bff;
+  animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+  to {
+    transform: rotate(1turn);
+  }
 }

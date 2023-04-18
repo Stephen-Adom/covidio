@@ -6,8 +6,16 @@ function App() {
   console.log(location.pathname);
   return (
     <div className="App">
-      {location.pathname !== '/' && <Navigation />}
-      <Outlet />
+      {location.pathname !== '/' ? (
+        <>
+          <Navigation />
+          <main className="mt-[4rem]">
+            <Outlet />
+          </main>
+        </>
+      ) : (
+        <Outlet />
+      )}
     </div>
   );
 }
