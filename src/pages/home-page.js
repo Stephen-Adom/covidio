@@ -1,5 +1,7 @@
 /* eslint-disable import/extensions */
-import React, { Suspense, useEffect, useState, useTransition } from 'react';
+import React, {
+  Suspense, useEffect, useState, useTransition,
+} from 'react';
 import { useDispatch } from 'react-redux';
 import { PageHeader, Countries } from '../features';
 import ComponentLoader from '../features/Loader/ComponentLoader';
