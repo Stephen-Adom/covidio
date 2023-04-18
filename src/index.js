@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
 import './index.css';
-import {
-  RouterProvider,
-} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import router from './route/routes';
 
