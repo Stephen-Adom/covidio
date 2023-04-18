@@ -3,11 +3,19 @@ import { Navigation } from './features';
 
 function App() {
   const location = useLocation();
-  console.log(location.pathname);
+
   return (
     <div className="App">
-      {location.pathname !== '/' && <Navigation />}
-      <Outlet />
+      {location.pathname !== '/' ? (
+        <>
+          <Navigation />
+          <main className="mt-[3.37rem]">
+            <Outlet />
+          </main>
+        </>
+      ) : (
+        <Outlet />
+      )}
     </div>
   );
 }
