@@ -1,16 +1,13 @@
 import React, {
   Suspense,
-  lazy,
   useEffect,
   useState,
   useTransition,
 } from 'react';
 import { useDispatch } from 'react-redux';
-import PageHeader from '../features/Header/PageHeader';
+import { PageHeader, Countries } from '../features';
 import ComponentLoader from '../features/Loader/ComponentLoader';
 import { getAllCountries, globalInfo } from '../redux/metrics/metricSlice';
-
-const Countries = lazy(() => import('../features/Countries/countries'));
 
 const Home = () => {
   const [data, setData] = useState(null);
