@@ -46,15 +46,21 @@ const Home = () => {
   return (
     <section className="text-red-600">
       {isPending ? (
-        <p>Loading...</p>
+        <ComponentLoader />
       ) : (
-        <>
-          <PageHeader data={data} />
+        <div>
+          {data ? (
+            <>
+              <PageHeader data={data} />
 
-          <Suspense fallback={<ComponentLoader />}>
-            {countries && <Countries countries={countries} />}
-          </Suspense>
-        </>
+              <Suspense fallback={<ComponentLoader />}>
+                {countries && <Countries countries={countries} />}
+              </Suspense>
+            </>
+          ) : (
+            <ComponentLoader />
+          )}
+        </div>
       )}
     </section>
   );
