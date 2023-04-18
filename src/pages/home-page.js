@@ -89,6 +89,9 @@ const Home = () => {
             )}
           </header>
 
+          <Suspense fallback={<ComponentLoader />}>
+            <Countries countries={countries} />
+          </Suspense>
         </>
       )}
     </section>
