@@ -50,6 +50,22 @@ const metricSlice = createSlice({
         IsRejected.status = 'rejected';
         IsRejected.global = {};
         IsRejected.error = action.payload;
+      })
+      .addCase(getAllCountries.pending, (state) => {
+        const IsPending = state;
+        IsPending.status = 'pending';
+      })
+      .addCase(getAllCountries.fulfilled, (state, action) => {
+        const IsFulfilled = state;
+        IsFulfilled.status = 'fulfilled';
+        IsFulfilled.countries = action.payload;
+        IsFulfilled.error = '';
+      })
+      .addCase(getAllCountries.rejected, (state, action) => {
+        const IsRejected = state;
+        IsRejected.status = 'rejected';
+        IsRejected.countries = [];
+        IsRejected.error = action.payload;
       });
   },
 });
