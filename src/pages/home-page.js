@@ -15,6 +15,7 @@ const Countries = lazy(() => import('../features/Countries/countries'));
 
 const Home = () => {
   const [data, setData] = useState(null);
+  const [countries, setCountries] = useState(null);
   const [isPending, startTransition] = useTransition();
   const dispatch = useDispatch();
 
@@ -26,9 +27,18 @@ const Home = () => {
     });
   }, [dispatch]);
 
+  const fetchCountries = useCallback(() => {
+    dispatch(getAllCountries()).then((res) => {
+      if (res.meta.requestStatus === 'fulfilled') {
+        setCountries(res.payload);
+      }
+    });
+  }, [dispatch]);
+
   useEffect(() => {
     startTransition(() => {
       fetchData();
+      fetchCountries();
     });
   }, [dispatch, fetchData, fetchCountries]);
 
