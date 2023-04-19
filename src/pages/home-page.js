@@ -1,15 +1,13 @@
-/* eslint-disable import/extensions */
 import React, {
   Suspense, useEffect, useState, useTransition,
 } from 'react';
 import { useDispatch } from 'react-redux';
 import { PageHeader, Countries } from '../features';
 import ComponentLoader from '../features/Loader/ComponentLoader';
-import { getAllCountries, globalInfo } from '../redux/metrics/metricSlice';
+import { getAllCountries, globalInfo, getAllContinents } from '../redux/metrics/metricSlice';
 
 const Home = () => {
   const [data, setData] = useState(null);
-  const [countries, setCountries] = useState(null);
   const [isPending, startTransition] = useTransition();
   const dispatch = useDispatch();
 
@@ -25,17 +23,20 @@ const Home = () => {
 
   const fetchCountries = () => {
     startTransition(() => {
-      dispatch(getAllCountries()).then((res) => {
-        if (res.meta.requestStatus === 'fulfilled') {
-          setCountries(res.payload);
-        }
-      });
+      dispatch(getAllCountries());
+    });
+  };
+
+  const fetchContinents = () => {
+    startTransition(() => {
+      dispatch(getAllContinents());
     });
   };
 
   useEffect(() => {
     fetchData();
     fetchCountries();
+    fetchContinents();
   }, [dispatch]);
 
   return (
@@ -49,7 +50,7 @@ const Home = () => {
               <PageHeader data={data} />
 
               <Suspense fallback={<ComponentLoader />}>
-                {countries && <Countries countries={countries} />}
+                <Countries type="continent" />
               </Suspense>
             </>
           ) : (

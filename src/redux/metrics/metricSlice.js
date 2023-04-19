@@ -3,12 +3,14 @@ import {
   fetchAllCountries,
   fetchContinent,
   fetchGlobalData,
+  fetchAllContinents,
 } from '../api/endpoints';
 
 const initialState = {
   global: {},
   countries: [],
   continent: {},
+  allContinents: [],
   status: '',
   error: '',
 };
@@ -16,6 +18,15 @@ const initialState = {
 export const globalInfo = createAsyncThunk('metrics/all', async (thunkAPI) => {
   try {
     const response = await fetchGlobalData();
+    return response.data;
+  } catch (err) {
+    return thunkAPI.rejectWithValue(err.response.data);
+  }
+});
+
+export const getAllContinents = createAsyncThunk('metrics/all-continents', async (thunkAPI) => {
+  try {
+    const response = await fetchAllContinents();
     return response.data;
   } catch (err) {
     return thunkAPI.rejectWithValue(err.response.data);
@@ -68,6 +79,25 @@ const metricSlice = createSlice({
         IsRejected.global = {};
         IsRejected.error = action.payload;
       })
+
+      .addCase(getAllContinents.pending, (state) => {
+        const IsPending = state;
+        IsPending.status = 'pending';
+      })
+
+      .addCase(getAllContinents.fulfilled, (state, action) => {
+        const IsFulfilled = state;
+        IsFulfilled.status = 'fulfilled';
+        IsFulfilled.allContinents = action.payload;
+        IsFulfilled.error = '';
+      })
+
+      .addCase(getAllContinents.rejected, (state, action) => {
+        const IsRejected = state;
+        IsRejected.status = 'rejected';
+        IsRejected.error = action.payload;
+      })
+
       .addCase(getAllCountries.pending, (state) => {
         const IsPending = state;
         IsPending.status = 'pending';

@@ -12,7 +12,6 @@ const Countries = lazy(() => import('../features/Countries/countries'));
 const Continent = () => {
   const [continentData, setContinent] = useState(null);
   const allCountries = useSelector((state) => state.metrics.countries);
-  const [specific, setSpecific] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
   const { continent } = useParams();
@@ -47,17 +46,6 @@ const Continent = () => {
     }
   }, [allCountries, dispatch]);
 
-  useEffect(() => {
-    if (allCountries.length && continent) {
-      const data = allCountries.filter(
-        (country) => country.continent === continent,
-      );
-      if (data) {
-        setSpecific(data);
-      }
-    }
-  }, [allCountries, continent]);
-
   return (
     <section>
       {isLoading ? (
@@ -67,7 +55,7 @@ const Continent = () => {
           <PageHeader data={continentData} />
 
           <Suspense fallback={<ComponentLoader />}>
-            {specific && <Countries countries={specific} />}
+            <Countries type="country" />
           </Suspense>
         </section>
       )}
