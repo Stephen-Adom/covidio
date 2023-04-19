@@ -43,7 +43,7 @@ const NavBar = () => {
         </Link> */}
       </nav>
       <ul className="w-0 menu-list" ref={ul}>
-        <li className="item-list">
+        <li className="item-list" data-testid="item-list">
           <NavLink
             to="/dashboard"
             className={`nav-link ${(isActive) => (isActive ? 'active' : '')}`}
@@ -52,7 +52,7 @@ const NavBar = () => {
             Home
           </NavLink>
         </li>
-        <li className="item-list">
+        <li className="item-list" data-testid="item-list">
           <NavLink
             to="/continents/Africa"
             className={`nav-link ${(isActive) => (isActive ? 'active' : '')}`}
@@ -61,7 +61,7 @@ const NavBar = () => {
             Africa
           </NavLink>
         </li>
-        <li className="item-list">
+        <li className="item-list" data-testid="item-list">
           <NavLink
             to="/continents/Asia"
             className={`nav-link ${(isActive) => (isActive ? 'active' : '')}`}
@@ -70,7 +70,7 @@ const NavBar = () => {
             Asia
           </NavLink>
         </li>
-        <li className="item-list">
+        <li className="item-list" data-testid="item-list">
           <NavLink
             to="/continents/Australia-Oceania"
             className="flex-col nav-link"
@@ -79,7 +79,7 @@ const NavBar = () => {
             Australia/Oceania
           </NavLink>
         </li>
-        <li className="item-list">
+        <li className="item-list" data-testid="item-list">
           <NavLink
             to="/continents/Europe"
             className={`nav-link ${(isActive) => (isActive ? 'active' : '')}`}
@@ -88,7 +88,7 @@ const NavBar = () => {
             Europe
           </NavLink>
         </li>
-        <li className="item-list">
+        <li className="item-list" data-testid="item-list">
           <NavLink
             to="/continents/North America"
             className={`nav-link ${(isActive) => (isActive ? 'active' : '')}`}
@@ -97,7 +97,7 @@ const NavBar = () => {
             North America
           </NavLink>
         </li>
-        <li className="item-list">
+        <li className="item-list" data-testid="item-list">
           <NavLink
             to="/continents/South America"
             className={`nav-link ${(isActive) => (isActive ? 'active' : '')}`}

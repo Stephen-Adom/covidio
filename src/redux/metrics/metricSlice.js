@@ -18,7 +18,7 @@ const initialState = {
 export const globalInfo = createAsyncThunk('metrics/all', async (thunkAPI) => {
   try {
     const response = await fetchGlobalData();
-    return response.data;
+    return response;
   } catch (err) {
     return thunkAPI.rejectWithValue(err.response.data);
   }
@@ -27,7 +27,7 @@ export const globalInfo = createAsyncThunk('metrics/all', async (thunkAPI) => {
 export const getAllContinents = createAsyncThunk('metrics/all-continents', async (thunkAPI) => {
   try {
     const response = await fetchAllContinents();
-    return response.data;
+    return response;
   } catch (err) {
     return thunkAPI.rejectWithValue(err.response.data);
   }
@@ -38,7 +38,7 @@ export const getAllCountries = createAsyncThunk(
   async (thunkAPI) => {
     try {
       const response = await fetchAllCountries();
-      return response.data;
+      return response;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.response.data);
     }
@@ -50,7 +50,7 @@ export const getContinent = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       const response = await fetchContinent(payload);
-      return response.data;
+      return response;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.response.data);
     }
