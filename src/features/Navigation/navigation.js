@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <header className="nav-header relative md:w-[30%] xl:w-[20%] md:fixed top-0 md:h-screen md:overflow-y-scroll">
-      <nav className="fixed w-full top-0 bg-slate-950 z-50 p-5 md:mt-0 flex items-center justify-between md:justify-center">
+      <nav className="fixed top-0 z-50 flex items-center justify-between w-full p-5 bg-slate-950 md:mt-0 md:justify-center">
         <button
           type="button"
           className="bg-transparent menu-btn md:hidden"
@@ -38,11 +38,11 @@ const NavBar = () => {
             />
           </svg>
         </button>
-        {/* <Link to="/" className="uppercase font-bold md:text-xl lg:text-2xl">
+        {/* <Link to="/" className="font-bold uppercase md:text-xl lg:text-2xl">
           Covid-Metrics
         </Link> */}
       </nav>
-      <ul className="menu-list w-0 md:w-full" ref={ul}>
+      <ul className="w-0 menu-list" ref={ul}>
         <li className="item-list">
           <NavLink
             to="/dashboard"
@@ -73,7 +73,7 @@ const NavBar = () => {
         <li className="item-list">
           <NavLink
             to="/continents/Australia-Oceania"
-            className="nav-link flex-col"
+            className="flex-col nav-link"
             onClick={openMenu}
           >
             Australia/Oceania

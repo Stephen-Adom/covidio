@@ -17,3 +17,9 @@ export const fetchContinent = async (continent) => {
   const response = await instance.get(`/continents/${continent}`);
   return response;
 };
+
+// Get data for all continents
+export const fetchAllContinents = async () => {
+  const response = await instance.get('/continents');
+  return response;
+};

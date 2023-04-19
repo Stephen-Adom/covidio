@@ -6,6 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        blueColor: '#4369b2',
+        darkBlue: '#35548b',
+      },
+      fontFamily: {
+        lato: ['Lato'],
       },
     },
   },
