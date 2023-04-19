@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import PropTypes from 'prop-types';
 import React from 'react';
 import { useParams, useNavigate } from 'react-router';
@@ -62,7 +61,7 @@ const PageHeader = ({ data }) => {
 };
 
 PageHeader.propTypes = {
-  data: PropTypes.shape([]),
+  data: PropTypes.shape([]).isRequired,
 };
 
 export default PageHeader;
