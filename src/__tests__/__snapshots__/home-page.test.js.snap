@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page should render home page correctly 1`] = `
+<div
+  className="App"
+>
+  <section
+    className="splash-container"
+  >
+    <div
+      className="relative logo-container"
+    >
+      <img
+        alt="covido"
+        className="bounce-in-fwd"
+        src="covido-logo.png"
+        width="100%"
+      />
+      <h1
+        className="logo tracking-in-expand"
+      >
+        Covidio
+      </h1>
+    </div>
+  </section>
+</div>
+`;
