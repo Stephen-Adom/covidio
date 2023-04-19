@@ -22,6 +22,7 @@
     "import/extensions": "off",
     "no-param-reassign": "off",
     "import/no-cycle": "off",
+    "linebreak-style": "off",
     "no-shadow": "off"
   },
   "ignorePatterns": [
