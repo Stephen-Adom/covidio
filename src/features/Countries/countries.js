@@ -32,14 +32,14 @@ const Countries = ({ countries }) => {
   return (
     <section className="p-2">
       <div className="mb-5">
-        <div className=" px-2">
+        <div className="px-2 ">
           {specific && (
             <DataTable
               value={specific}
               responsiveLayout="scroll"
               header={continent ? `Countries in ${continent}` : 'All Countries'}
               showGridlines
-              className="data-table shadow shadow-slate-500"
+              className="shadow data-table shadow-slate-500"
             >
               {dynamicCols}
             </DataTable>

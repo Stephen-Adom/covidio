@@ -8,32 +8,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  /* NavBar */
-  header.nav-header {
-    @apply bg-slate-950 text-white;
-
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-
-  header.nav-header::-webkit-scrollbar {
-    display: none;
-  }
-
-  ul.menu-list {
-    @apply bg-slate-950 h-screen flex flex-col md:gap-4 pt-16 md:pt-2 fixed z-10 overflow-hidden transition-all ease-out duration-500 items-center;
-  }
-
-  a.nav-link {
-    @apply block w-[10rem] text-center p-5 md:p-2 md:border rounded-md md:w-[10rem] md:h-[4.5rem] md:flex justify-center items-center md:text-center hover:bg-slate-800 transition-all ease-out duration-300;
-  }
-
-  a.active {
-    @apply bg-slate-800;
-  }
-}
-
 :root {
   --primary: #96bf01;
   --secondary: #7ea002;
@@ -46,6 +20,30 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* NavBar */
+header.nav-header {
+  @apply text-white bg-slate-950;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+header.nav-header::-webkit-scrollbar {
+  display: none;
+}
+
+ul.menu-list {
+  @apply fixed z-10 flex flex-col items-center h-screen pt-16 overflow-hidden transition-all duration-500 ease-out bg-slate-950 md:gap-4 md:pt-2;
+}
+
+a.nav-link {
+  @apply block w-[10rem] text-center p-5 md:p-2 md:border rounded-md md:w-[10rem] md:h-[4.5rem] md:flex justify-center items-center md:text-center hover:bg-slate-800 transition-all ease-out duration-300;
+}
+
+a.active {
+  @apply bg-slate-800;
 }
 
 .spinner {
