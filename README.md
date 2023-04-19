@@ -52,7 +52,7 @@ Covido is an app designed to help users stay up-to-date on the latest COVID-19 s
 ![Splash Screen](./src/assets/screenshots/splash-screen.png)
 ![Dashboard Page](./src/assets/screenshots/dashboard.png)
 ![Details Page](./src/assets/screenshots/details.png)
-![Sidebar](./src/assets/screenshots/splash-screen.png)
+![Sidebar](./src/assets/screenshots/sidebar.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
