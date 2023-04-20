@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <header className="nav-header relative md:w-[30%] xl:w-[20%] md:fixed top-0 md:h-screen md:overflow-y-scroll">
-      <nav className="fixed top-0 z-50 flex items-center justify-between w-full p-5 bg-slate-950 md:mt-0 md:justify-center">
+      <nav className="fixed top-0 z-50 flex items-center justify-between w-full p-5 bg-blueColor md:mt-0 md:justify-center">
         <button
           type="button"
           className="bg-transparent menu-btn md:hidden"

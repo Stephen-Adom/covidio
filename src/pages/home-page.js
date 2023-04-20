@@ -2,8 +2,9 @@ import React, {
   Suspense, useEffect, useState, useTransition,
 } from 'react';
 import { useDispatch } from 'react-redux';
-import { PageHeader, Countries } from '../features';
+import { PageHeader } from '../features';
 import ComponentLoader from '../features/Loader/ComponentLoader';
+import { GridList } from '../components';
 import { getAllCountries, globalInfo, getAllContinents } from '../redux/metrics/metricSlice';
 
 const Home = () => {
@@ -50,7 +51,7 @@ const Home = () => {
               <PageHeader data={data} />
 
               <Suspense fallback={<ComponentLoader />}>
-                <Countries type="continent" />
+                <GridList />
               </Suspense>
             </>
           ) : (

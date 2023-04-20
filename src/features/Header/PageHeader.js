@@ -23,34 +23,34 @@ const PageHeader = ({ data }) => {
       </div>
 
       {data && (
-        <section className="flex flex-wrap justify-center gap-4 mt-3">
+        <section className="flex flex-wrap justify-center mt-3 gap-x-4">
           <div className={styles.card}>
             <p>Total Cases</p>
-            <p className="font-bold text-green-300">
+            <p className="font-bold text-white">
               {data.cases.toLocaleString()}
             </p>
           </div>
           <div className={styles.card}>
             <p>Active Cases</p>
-            <p className="font-bold text-yellow-100">
+            <p className="font-bold text-white">
               {data.active.toLocaleString()}
             </p>
           </div>
           <div className={styles.card}>
             <p>Total Deaths</p>
-            <p className="font-bold text-red-500">
+            <p className="font-bold text-white">
               {data.deaths.toLocaleString()}
             </p>
           </div>
           <div className={styles.card}>
             <p>New Cases</p>
-            <p className="font-bold text-green-300">
+            <p className="font-bold text-white">
               {data.todayCases.toLocaleString()}
             </p>
           </div>
           <div className={styles.card}>
             <p>Critical Cases</p>
-            <p className="font-bold text-yellow-500">
+            <p className="font-bold text-white">
               {data.critical.toLocaleString()}
             </p>
           </div>
