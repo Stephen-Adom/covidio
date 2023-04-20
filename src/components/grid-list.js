@@ -5,7 +5,12 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const GridList = () => {
+  const navigate = useNavigate();
   const continents = useSelector((state) => state.metrics.allContinents);
+
+  const viewContinentDetails = (continent) => {
+    navigate(`/continents/${continent.continent}`);
+  };
 
   return (
     <div className="continent-list">
@@ -17,8 +22,8 @@ const GridList = () => {
         {
         continents.length && continents.map((continent) => (
           <div className="continent-info min-h-[180px] relative flex flex-col items-center justify-center" key={continent.continent}>
-            <button type="button">
-              <BsArrowRightCircle className="absolute text-lg text-white top-1 right-3" />
+            <button type="button" className="absolute top-2 right-4" onClick={() => viewContinentDetails(continent)}>
+              <BsArrowRightCircle className="text-lg text-white" />
             </button>
 
             <h1 className="text-2xl font-extrabold text-center text-white">{continent.continent}</h1>

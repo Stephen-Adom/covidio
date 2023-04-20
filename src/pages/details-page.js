@@ -1,13 +1,12 @@
 import React, {
-  Suspense, lazy, useEffect, useState,
+  Suspense, useEffect, useState,
 } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import PageHeader from '../features/Header/PageHeader';
 import ComponentLoader from '../features/Loader/ComponentLoader';
 import { getAllCountries, getContinent } from '../redux/metrics/metricSlice';
-
-const Countries = lazy(() => import('../features/Countries/countries'));
+import { CountryList } from '../components';
 
 const Continent = () => {
   const [continentData, setContinent] = useState(null);
@@ -55,7 +54,7 @@ const Continent = () => {
           <PageHeader data={continentData} />
 
           <Suspense fallback={<ComponentLoader />}>
-            <Countries type="country" />
+            <CountryList />
           </Suspense>
         </section>
       )}
