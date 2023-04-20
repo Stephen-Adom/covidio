@@ -26,7 +26,7 @@
 
 # 📖 [Covido] <a name="about-project"></a>
 
-Covido is an app designed to help users stay up-to-date on the latest COVID-19 statistics from around the world. The app features two main pages: the Dashboard and the Details page. It is built with Reactjs, PrimeReact and TailwindCSS
+Covido is an app designed to help users stay up-to-date on the latest COVID-19 statistics from around the world. The app features two main pages: the Dashboard and the Details page. It is built with Reactjs, PrimeReact and TailwindCSS. Here is a link to the live project overview [live demo](https://drive.google.com/file/d/17BvE2SK8XZ_zEzcVFOggaJAk7sB49_ow/view?usp=sharing)
 
 ## 🛠 Built With <a name="built-with"></a>
 
