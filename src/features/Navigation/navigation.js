@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-// import { RiMenu4Fill } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
