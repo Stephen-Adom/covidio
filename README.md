@@ -63,7 +63,7 @@ Covido is an app designed to help users stay up-to-date on the latest COVID-19 s
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Here is the link to the live demo version - [Covidio](https://covidio.vercel.app)
+- Here is the link to the live demo version - [Covidio](https://covidio-git-dev-stephen-adom.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
