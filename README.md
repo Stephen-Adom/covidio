@@ -15,6 +15,8 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -26,7 +28,7 @@
 
 # 📖 [Covido] <a name="about-project"></a>
 
-Covido is an app designed to help users stay up-to-date on the latest COVID-19 statistics from around the world. The app features two main pages: the Dashboard and the Details page. It is built with Reactjs, PrimeReact and TailwindCSS
+Covido is an app designed to help users stay up-to-date on the latest COVID-19 statistics from around the world. The app features two main pages: the Dashboard and the Details page. It is built with Reactjs, PrimeReact and TailwindCSS. Here is a link to the live project overview [live demo](https://drive.google.com/file/d/17BvE2SK8XZ_zEzcVFOggaJAk7sB49_ow/view?usp=sharing)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -92,13 +94,9 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-Example command:
-
 ```sh
   npm install
 ```
-
--
 
 ### Usage
 
@@ -108,7 +106,23 @@ To run the project, execute the following command:
   npm run start
 ```
 
--
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  npm run test
+```
+
+### Deployment
+
+You can deploy this project using:
+
+```sh
+  Vercel, Netlify or Github Pages
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
