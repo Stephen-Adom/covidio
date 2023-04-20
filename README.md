@@ -9,6 +9,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🖼️ScreenShot](#screenshot)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -53,6 +54,14 @@ Covido is an app designed to help users stay up-to-date on the latest COVID-19 s
 ![Dashboard Page](./src/assets/screenshots/dashboard.png)
 ![Details Page](./src/assets/screenshots/details.png)
 ![Sidebar](./src/assets/screenshots/sidebar.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- Here is the link to the live demo version - [Covidio](https://covidio.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
