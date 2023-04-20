@@ -15,6 +15,8 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -98,8 +100,6 @@ Example command:
   npm install
 ```
 
--
-
 ### Usage
 
 To run the project, execute the following command:
@@ -108,7 +108,28 @@ To run the project, execute the following command:
   npm run start
 ```
 
--
+### Run tests
+
+To run tests, run the following command:
+
+<!--
+Example command:
+
+```sh
+  npm run test
+```
+--->
+
+
+### Deployment
+
+You can deploy this project using:
+
+```sh
+  Vercel, Netlify or Github Pages
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
