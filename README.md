@@ -112,14 +112,11 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-<!--
 Example command:
 
 ```sh
   npm run test
 ```
---->
-
 
 ### Deployment
 
