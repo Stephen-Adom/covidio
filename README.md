@@ -94,8 +94,6 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-Example command:
-
 ```sh
   npm install
 ```
@@ -111,8 +109,6 @@ To run the project, execute the following command:
 ### Run tests
 
 To run tests, run the following command:
-
-Example command:
 
 ```sh
   npm run test
