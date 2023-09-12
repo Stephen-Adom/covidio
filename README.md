@@ -132,7 +132,7 @@ You can deploy this project using:
 
 - GitHub: [@Stephen-Adom](https://github.com/Stephen-Adom)
 - Twitter: [@stephen_alaska](https://twitter.com/stephen_alaska)
-- LinkedIn: [Stephen Addae](https://www.linkedin.com/in/stephen-addae/)
+- LinkedIn [Stephen Addae](https://www.linkedin.com/in/stephen-addae/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
